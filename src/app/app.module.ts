@@ -17,7 +17,21 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { DescriptionComponent } from './description/description.component';
+import { DirectorComponent } from './director/director.component';
+import { GenreComponent } from './genre/genre.component';
 
+
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+];
 
 @NgModule({
   declarations: [
@@ -25,6 +39,13 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     UserRegistrationFormComponent,
     UserLoginFormComponent,
     MovieCardComponent,
+    WelcomePageComponent,
+    ProfileComponent,
+    NavbarComponent,
+    EditUserComponent,
+    DescriptionComponent,
+    DirectorComponent,
+    GenreComponent,
     
 
   ],
@@ -43,6 +64,8 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     MatFormFieldModule,
     MatSnackBarModule,
     FormsModule,
+    MatIconModule,
+    RouterModule.forRoot(appRoutes),
     MatIconModule,
   ],
   providers: [],
