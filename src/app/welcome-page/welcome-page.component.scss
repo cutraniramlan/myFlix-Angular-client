@@ -1,0 +1,37 @@
+$bgColor: #fb7bee;
+$text: hsl(0, 5%, 4%);
+$boxColor: #5e2b4a;
+$secondColor: #cfa6cf;
+
+.welcome-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: $bgColor;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: $boxColor;
+  border-width: 5px;
+}
+
+.welcome-card {
+  max-width: 400px;
+  margin: auto;
+  padding: 25px;
+  background-color: $secondColor;
+  border-style: solid;
+  border-color: $boxColor;
+  border-width: 5px;
+}
+
+.welcome-header {
+  display: flex;
+  justify-content: center;
+  color: $text;
+}
+
+.register {
+  background-color: $boxColor;
+}
